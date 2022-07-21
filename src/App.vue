@@ -1,30 +1,31 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  
+  <router-view></router-view>
+
 </template>
 
+<script>
+import HomeViewVue from './views/HomeView.vue'
+import AboutViewVue from './views/AboutView.vue'
+import DashboardViewVue from './views/DashboardView.vue'
+export default {
+  components: {
+    "app-login": HomeViewVue,
+    "app-signup": AboutViewVue,
+    "app-dashboard": DashboardViewVue,
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  font-family: 'Open Sans', sans-serif;
+  
 }
 </style>
